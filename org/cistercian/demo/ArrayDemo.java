@@ -10,9 +10,9 @@ public class ArrayDemo {
             System.out.println(primes[i]);
         }
 
-        int x = primes[1];
-        int y = primes[3];
-        int z = primes[2] + primes[4];
+        int x = primes[1] + primes[3];
+        int y = primes[4] % 2;
+        int z = primes[0] * primes[4];
         System.out.printf("%d, %d, %d\n", x, y, z);
 
 
@@ -25,7 +25,7 @@ public class ArrayDemo {
         }
 
         int[][] matrix = {{1, 2}, {3, 4}, {5, 6}};
-        int n = matrix[2][1];
+        int n = matrix[1][0];
         System.out.println(n);
     }
 }
