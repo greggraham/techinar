@@ -1,46 +1,42 @@
+import java.time.LocalDate;
+
 public class Student {
-    final int id;
+    int id;
     String firstName;
-    final String lastName;
+    String lastName;
     int birthYear, birthMonth, birthDay;
 
-    final static int MAX_NUMBER_OF_STUDENTS = 1000;
-    static int studentCount = 0;
-    static Student[] studentList = new Student[MAX_NUMBER_OF_STUDENTS];
-
-    Student(String fn, String ln) {
-        firstName = fn;
-        lastName = ln;
-        id = studentCount;
-        if (studentCount < MAX_NUMBER_OF_STUDENTS) {
-            studentList[studentCount] = this;
-            studentCount++;
-        } else {
-            System.out.println("Maximum number of students exceeded. Student not added.");
-        }
-    }
-
     boolean isBirthday() {
-        return false;
+        LocalDate now = LocalDate.now();
+        return now.getYear() == birthYear && now.getMonthValue() == birthMonth && now.getDayOfMonth() == birthDay;
     }
 
     void giveWarning(boolean isFinalWarning) {
-        // Study!
-    }
-
-    int numberOfFriends() {
-        // Duck
-        return 1;
+        System.out.printf("Dear %s %s:\n", firstName, lastName);
+        if (isFinalWarning) {
+            System.out.println("You are about to fail. You must make major changes immediately. This is your final warning.");
+        } else {
+            System.out.println("Your grades are unsatisfactory. You need to study more.");
+        }
+        System.out.println("Yours truly,");
+        System.out.println("The Administration");
     }
 
     public static void main(String[] args) {
-        Student firstStudent = new Student("Joe", "Cool");
-        Student secondStudent = new Student("Frank", "Bombadil");
-        secondStudent.firstName = "Tom";
-
-        System.out.println(studentCount);
-        System.out.println(studentList[1].lastName);
-        System.out.println(studentList[1].firstName);
-        System.out.println(studentList[1].id);
+        Student firstStudent = new Student();
+        firstStudent.id = 1;
+        firstStudent.firstName = "Frank";
+        firstStudent.lastName = "Hardy";
+        firstStudent.birthYear = 1911;
+        firstStudent.birthMonth = 9;
+        firstStudent.birthDay = 13;
+        System.out.println(firstStudent.isBirthday() ? "Happy Birthday " : "Good Day " + firstStudent.firstName);
+        Student secondStudent = new Student();
+        firstStudent.id = 2;
+        secondStudent.firstName = "Joe";
+        firstStudent.lastName = "Hardy";
+        firstStudent.birthYear = 1912;
+        firstStudent.birthMonth = 9;
+        firstStudent.birthDay = 14;
     }
 }
