@@ -8,18 +8,23 @@ public class Student {
 
     boolean isBirthday() {
         LocalDate now = LocalDate.now();
-        return now.getYear() == birthYear && now.getMonthValue() == birthMonth && now.getDayOfMonth() == birthDay;
+        return now.getMonthValue() == birthMonth && now.getDayOfMonth() == birthDay;
     }
 
     void giveWarning(boolean isFinalWarning) {
-        System.out.printf("Dear %s %s:\n", firstName, lastName);
+        System.out.printf("\nDear %s %s:\n\n", firstName, lastName);
         if (isFinalWarning) {
             System.out.println("You are about to fail. You must make major changes immediately. This is your final warning.");
         } else {
             System.out.println("Your grades are unsatisfactory. You need to study more.");
         }
-        System.out.println("Yours truly,");
-        System.out.println("The Administration");
+        if (isBirthday()) {
+            System.out.println("Happy Birthday!");
+        } else {
+            System.out.println("Good day.");
+        }
+        System.out.println("\nYours truly,");
+        System.out.println("The Administration\n");
     }
 
     public static void main(String[] args) {
@@ -30,13 +35,15 @@ public class Student {
         firstStudent.birthYear = 1911;
         firstStudent.birthMonth = 9;
         firstStudent.birthDay = 13;
-        System.out.println(firstStudent.isBirthday() ? "Happy Birthday " : "Good Day " + firstStudent.firstName);
+        firstStudent.giveWarning(false);
+
         Student secondStudent = new Student();
-        firstStudent.id = 2;
+        secondStudent.id = 2;
         secondStudent.firstName = "Joe";
-        firstStudent.lastName = "Hardy";
-        firstStudent.birthYear = 1912;
-        firstStudent.birthMonth = 9;
-        firstStudent.birthDay = 14;
+        secondStudent.lastName = "Hardy";
+        secondStudent.birthYear = 1912;
+        secondStudent.birthMonth = 9;
+        secondStudent.birthDay = 14;
+        secondStudent.giveWarning(true);
     }
 }
