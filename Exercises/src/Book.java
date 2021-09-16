@@ -5,17 +5,17 @@ public class Book {
     int copiesSold;
 
     Book(String t) {
-        // Call base constructor
-        this(t, DEFAULT_YEAR, 0);
+        title = t;
+        releaseYear = DEFAULT_YEAR;
+        // copiesSold will default to 0;
     }
 
     Book(String t, int r) {
-        // Call base constructor
-        this(t, r, 0);
+        title = t;
+        releaseYear = r;
+        // copiesSold will default to 0
     }
 
-    // This is the base constructor that has no defaults, so all
-    // values must be supplied by the parameters.
     Book(String t, int r, int s) {
         title = t;
         releaseYear = r;
