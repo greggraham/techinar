@@ -7,8 +7,8 @@ public class Test {
 
     public static void main(String[] args) {
         Test t = new Test();
-        System.out.println("Instance var a is: " + t.array[0]);
+        System.out.println("First element of array is: " + t.array[0]);
         Test.increaseInt(t.array);
-        System.out.println("Instance var a is now: " + t.array[0]);
+        System.out.println("First element of array is now: " + t.array[0]);
     }
 }
