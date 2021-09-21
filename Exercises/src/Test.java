@@ -5,10 +5,16 @@ public class Test {
         anIntArray[0]++;
     }
 
+    static void changeIntArray(int[] anIntArray) {
+        anIntArray = new int[] {100, 200, 300};
+    }
+
     public static void main(String[] args) {
         Test t = new Test();
         System.out.println("First element of array is: " + t.array[0]);
         Test.increaseFirstInt(t.array);
+        System.out.println("First element of array is now: " + t.array[0]);
+        Test.changeIntArray(t.array);
         System.out.println("First element of array is now: " + t.array[0]);
     }
 }
