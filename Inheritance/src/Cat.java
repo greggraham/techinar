@@ -1,7 +1,7 @@
-public class Dog extends Animal {
+public class Cat extends Animal {
     private String name;
 
-    public Dog(String name) {
+    public Cat(String name) {
         super(4);
         this.name = name;
     }
@@ -13,6 +13,6 @@ public class Dog extends Animal {
 
     @Override
     public String makeSound() {
-        return "Bark";
+        return "Meow";
     }
 }

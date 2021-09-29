@@ -1,7 +1,15 @@
 public class Animal {
-    int numLegs;
+    protected int numLegs;
 
-    Animal(int numLegs) {
+    public Animal(int numLegs) {
         this.numLegs = numLegs;
+    }
+
+    public String identity() {
+        return "unknown";
+    }
+
+    public String makeSound() {
+        return "unknown";
     }
 }

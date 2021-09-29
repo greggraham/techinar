@@ -1,7 +1,23 @@
-public class Beagle extends Dog {
-    int rabbitsCaught = 0;
+import java.util.Random;
 
-    Beagle(String name) {
+public class Beagle extends Dog {
+    private int rabbitsCaught = 0;
+    Random rand = new Random();
+
+    public Beagle(String name) {
         super(name);
+    }
+
+    @Override
+    public String makeSound() {
+        return "Howl";
+    }
+
+    public void hunt() {
+        rabbitsCaught += rand.nextInt(3);
+    }
+
+    public int getRabbitsCaught() {
+        return rabbitsCaught;
     }
 }
