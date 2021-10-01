@@ -1,15 +1,11 @@
-public class Animal {
+public abstract class Animal {
     protected int numLegs;
 
     public Animal(int numLegs) {
         this.numLegs = numLegs;
     }
 
-    public String identity() {
-        return "unknown";
-    }
+    public abstract String identity();
 
-    public String makeSound() {
-        return "unknown";
-    }
+    public abstract String makeSound();
 }

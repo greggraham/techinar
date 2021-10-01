@@ -20,4 +20,9 @@ public class Beagle extends Dog {
     public int getRabbitsCaught() {
         return rabbitsCaught;
     }
+
+    @Override
+    public String toString() {
+        return identity() + " the Beagle";
+    }
 }
