@@ -1,3 +1,5 @@
+package example1;
+
 public class AccountManager {
     public static void main(String[] args) throws Exception {
         Account myAccount = new Account("FirstAccount", "10.00");
