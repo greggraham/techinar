@@ -10,7 +10,7 @@ __pycache__/
 # Ignore local virtual environments managed by uv
 .venv/
 
-# NOTE: Do NOT ignore uv.lock! Keep it tracked in Git so students have 
+# NOTE: Do NOT ignore uv.lock! Keep it tracked in Git so students have
 # identical, reproducible environment versions across their machines.
 
 # ==============================================================================
@@ -30,7 +30,8 @@ __pycache__/
 .ipynb_checkpoints
 
 # Large Datasets & Storage (Crucial for high schoolers to prevent Git bloat)
-data/
+data/*
+!data/README.md
 datasets/
 *.csv
 *.json
