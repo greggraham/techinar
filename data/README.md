@@ -11,7 +11,16 @@ UCI lists the dataset under the [CC BY 4.0 license](https://creativecommons.org/
 The original measurements are in centimeters. The data are small, public,
 non-personal, and included by scikit-learn for educational use.
 
-For future lessons, document each dataset's source and license here. Do not
-commit large datasets, private data, or data containing personally identifying
-information. Put locally downloaded files in this directory only when their
-license and size make redistribution appropriate.
+## Other Lessons
+
+Data for other lessons are available at [https://grahamtx.net/data] or other sites given
+by the teacher.
+
+## Github Data Best Practices
+
+Do not commit large datasets, private data, or data containing personally identifying
+information. This folder is in the .gitignore file for this reason. An exception is
+made for this README.md file, so you can use it to store links to where the data can
+be downloaded. If you are maintaining your own data files, OneDrive would be a good
+place to store them.
+
