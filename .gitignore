@@ -1,0 +1,61 @@
+# ==============================================================================
+# 1. PYTHON & TOOLS (uv / Ruff)
+# ==============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+
+# Ignore local virtual environments managed by uv
+.venv/
+
+# NOTE: Do NOT ignore uv.lock! Keep it tracked in Git so students have 
+# identical, reproducible environment versions across their machines.
+
+# ==============================================================================
+# 2. VISUAL STUDIO CODE
+# ==============================================================================
+.vscode/*
+# Allow shared project settings (interpreter configs, formatting rules)
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# ==============================================================================
+# 3. MACHINE LEARNING / DATA SCIENCE SPECIFICS
+# ==============================================================================
+# Jupyter Notebook checkpointers
+.ipynb_checkpoints
+
+# Large Datasets & Storage (Crucial for high schoolers to prevent Git bloat)
+data/
+datasets/
+*.csv
+*.json
+*.xlsx
+*.zip
+*.tar.gz
+*.gz
+
+# Large Trained Model Artifacts / Weights
+*.pth
+*.pt
+*.onnx
+*.pkl
+*.h5
+*.ckpt
+models/
+weights/
+
+# ==============================================================================
+# 4. ENVIRONMENT VARIABLES & OPERATING SYSTEM
+# ==============================================================================
+# Secret credentials or API keys (e.g., OpenAI keys, Kaggle tokens)
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
